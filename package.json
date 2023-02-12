@@ -1,8 +1,10 @@
 {
   "name": "openai-code-assistant",
-  "displayName": "openai-code-assistant",
+  "displayName": "OpenAI Code Assistant",
   "description": "An VSCode extension code assistant using OpenAI code completion and edit API",
   "version": "1.0.0",
+  "publisher": "SmarterTomato",
+  "icon": "resources/images/icon.png",
   "author": {
     "name": "Tommy Zhao",
     "email": "tommywkzhao@hotmail.com"
@@ -14,6 +16,7 @@
     "type": "github",
     "url": "https://github.com/SmarterTomato/openai-code-assistant.git"
   },
+  "homepage": "https://github.com/SmarterTomato/openai-code-assistant/blob/main/README.md",
   "keywords": [
     "OpenAI",
     "Code assistant",
