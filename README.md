@@ -25,8 +25,12 @@ The OpenAI code edit API currently **FREE** to use in the beta.
 - Edit code by instructions
 
 ### Edit code by instruction
+![Edit code example 1](https://raw.githubusercontent.com/SmarterTomato/openai-code-assistant/main/src/images/10.gif)
+![Edit code example 2](https://raw.githubusercontent.com/SmarterTomato/openai-code-assistant/main/src/images/20.gif)
+![Edit code example 3](https://raw.githubusercontent.com/SmarterTomato/openai-code-assistant/main/src/images/30.gif)
 
 ### Code generate by list of description
+![Code generate example](https://raw.githubusercontent.com/SmarterTomato/openai-code-assistant/main/src/images/40.gif)
 
 ## Key bindings
 
