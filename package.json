@@ -1,0 +1,87 @@
+{
+  "name": "openai-code-assistant",
+  "displayName": "openai-code-assistant",
+  "description": "An VSCode extension code assistant using OpenAI code completion and edit API",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tommy Zhao",
+    "email": "tommywkzhao@hotmail.com"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "keywords": [
+    "OpenAI",
+    "Code assistant",
+    "Code generate",
+    "ChatGPT"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "openaiCodeAssistant.editSelectedCode",
+        "title": "OpenAI Code Assistant: Edit Selected Code using OpenAI"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "OpenAI Code Assistant",
+        "properties": {
+          "openaiCodeAssistant.organisationId": {
+            "type": "string",
+            "description": "Organisation ID in the settings from your OpenAI account. E.g. `org-...`"
+          },
+          "openaiCodeAssistant.apiKey": {
+            "type": "string",
+            "description": "API keys used for authentication"
+          },
+          "openaiCodeAssistant.temperature": {
+            "type": "number",
+            "default": 0,
+            "description": "Higher temperature will generate more randomness result"
+          },
+          "openaiCodeAssistant.openaiModel": {
+            "type": "string",
+            "default": null,
+            "description": "Overwrite default OpenAI mode. https://platform.openai.com/docs/models/overview"
+          }
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "openaiCodeAssistant.editSelectedCode",
+        "key": "ctrl+f1"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.1",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "@vscode/test-electron": "^2.2.2",
+    "eslint": "^8.33.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "openai": "^3.1.0"
+  }
+}
