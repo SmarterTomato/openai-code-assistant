@@ -10,6 +10,10 @@
   "engines": {
     "vscode": "^1.75.0"
   },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/SmarterTomato/openai-code-assistant.git"
+  },
   "keywords": [
     "OpenAI",
     "Code assistant",
