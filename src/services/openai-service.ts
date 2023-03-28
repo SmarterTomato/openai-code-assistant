@@ -55,7 +55,9 @@ export class OpenAIService {
     }
 
     const response = await this.openai.createEdit(request);
-    if (response.status !== 200) {
+    if (response.status === 429) {
+      throw new Error('API rate limit exceeded. Currently each organisation limit to 20 request per second. Please try again later.');
+    } else if (response.status !== 200) {
       throw new Error(response.statusText);
     }
 
